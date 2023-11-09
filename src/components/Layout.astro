@@ -19,9 +19,9 @@ const { title } = Astro.props;
 		<link rel="stylesheet" href="/styles.css" />
 	</head>
 	<body>
-		<header class="w-screen flex justify-around items-center text-xl font-bold text-white">
-			<a href="/" class="w-1/2 bg-gray-500 text-center py-3">Home</a>
-			<a href="/help" class="w-1/2 bg-gray-500 text-center py-3">Help</a>
+		<header class="w-screen flex header-x justify-around items-center text-xl font-bold text-white opacity-[0.75]">
+			<a href="/" class="w-1/2 text-center py-3 shadow-xl text-shadow-md">Home</a>
+			<a href="/help" class="w-1/2 text-center py-3 shadow-xl text-shadow-md">Help</a>
 		</header>
 		<slot />
 	</body>
