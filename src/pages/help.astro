@@ -1,6 +1,33 @@
 ---
 import Layout from "../components/Layout.astro"
+import { marked } from "marked"
+
+const homeDocs = `
+
+1. Githubアカウントを作成する。
+
+2. Githubアカウントのユーザー名を @amex2189 or サポートOCで送る
+
+3. 反応を待つ
+
+4. 招待されたら以下のurlにアクセスする
+https://github.com/EdamAme-x/OpenChat-SelfBot-pro
+
+5. main.py の内容を replit (もしくは実環境で動かす。)
+簡単なヘルプは README.md に書いています。
+
+6. 実行して完了
+
+分からないことが有れば https://honmono.ame-x.net まで
+
+<br />
+
+製作者: ame_x / @amex2189
+https://www.ame-x.net
+`.replace(/\@br/gmsi, "<br class='my-1' />")
+
 ---
 <Layout title="Help | OC SelfBot">
 	<h1 class="text-2xl font-bold font-mono text-center mt-4">💭 Help</h1>
+	<div class="mt-10 px-5 text-md transform scale-[0.95] md:text-lg font-mono w-full flex flex-col justify-center items-center" set:html={marked(homeDocs)}></div>
 </Layout>

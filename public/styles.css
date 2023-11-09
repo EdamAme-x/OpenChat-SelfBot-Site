@@ -50,3 +50,7 @@ body {
 *::-webkit-scrollbar {
     display: none;
 }
+
+ol > li {
+    list-style: circle;
+}
