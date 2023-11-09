@@ -1,8 +1,61 @@
 ---
 import Layout from "../components/Layout.astro"
 import { marked } from "marked"
+
+const homeDocs = `
+## OC-X-BOT
+@br
+オープンチャット半botのヘルプサイトへようこそ。
+このサイトには値段、購入方法、出来ることや
+購入後のヘルプが書かれています。
+@br
+@br
+購入後のヘルプが見たい人は上の "Help" から飛んでください。
+@br  
+
+### Q & A
+@br
+
+##### Q. OC半botってなんやねん  
+@br
+A. 文字通り、オープンチャットで動くbotです。
+指定された文章に応答したり AIを使用したり、
+荒らしを自動検知したり・・・ 様々な事が出来ます。
+
+<br class="mt-2" />  
+
+##### Q. 半bot とは？
+@br
+A. 通常botはプログラムにより動き、自分からは直接操作できません。
+しかし自分の使っているアカウントで動くようにしています。
+
+<br class="mt-2" />  
+<br class="mt-2" />  
+  
+
+##### Q. どうやって買うの？
+
+@br
+
+A. Twitterの @amex2189 に連絡をする or https://honmono.ame-x.net で副官をメンションすることで可能です。
+
+<br class="mt-2" />  
+
+##### Q. 値段は？
+
+A. 2000円
+宣伝をすることで 400円割引可能です。
+またその宣伝から他の人が購入してくれれば 400円引きになります。  
+紹介された人も 400円引きになります。
+
+<br class="mt-2" />  
+
+製作者: ame_x / @amex2189
+https://www.ame-x.net
+`.replace(/\@br/gmsi, "<br class='my-1' />")
+
 ---
 <Layout title="Home | OC SelfBot">
 	<h1 class="text-2xl font-bold font-mono text-center mt-4">🏠 Home</h1>
-	<div class="mt-10 text-lg md:text-lg font-mono w-full flex flex-col justify-center items-center" set:html={marked(`## a`)}></div>
+	<div class="mt-10 px-5 text-md transform scale-[0.95] md:text-lg font-mono w-full flex flex-col justify-center items-center" set:html={marked(homeDocs)}></div>
 </Layout>
